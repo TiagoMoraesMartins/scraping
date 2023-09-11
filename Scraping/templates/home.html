@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %} Scraping {% endblock %} {% block
+content%}
+<div class="card-group">
+  <div class="card bg-light w-75">
+    <div class="card-body">
+      <h5 class="card-title">Extrair informações</h5>
+      <p class="card-text">
+        Somente serão extraídas informações que estiverem em tabelas.
+      </p>
+      <form method="POST">
+        <div class="form-group">
+          {{ form.url.label() }} {{ form.url(class="form-control",
+          id="urlInput", placeholder="Informe a url")}}
+          <small id="urlDescription" class="form-text text-muted"
+            >*Campo obrigatório.</small
+          >
+        </div>
+        {{ form.submit(class="btn btn-primary")}}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

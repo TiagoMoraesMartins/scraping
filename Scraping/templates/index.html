@@ -1,0 +1,15 @@
+{% extends "bootstrap/base.html" %} {% block title %} {{ config.get("TITLE")}}
+{%endblock %} {% block navbar %}
+<div class="navbar navbar-fixed-top">
+  <!-- ... -->
+</div>
+{% endblock %} {% block content %}
+<div class="container">
+  <h1>{{ config.get("TITLE") }}</h1>
+  <ul class="list-group">
+    {% for p in produtos %}
+    <li class="list-group-item">{{p}}</li>
+    {% endfor%}
+  </ul>
+</div>
+{% endblock %}
